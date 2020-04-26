@@ -49,7 +49,7 @@ mv ./Invoke-LovelyPotato.ps1 ./lovelypotato.ps1
 mv ./JuicyPotato-Static.exe ./juicypotato.exe
 rm README.md
 cd ..
-mv ./Lovely-Potato ./LovelyPotato
+mv /Lovely-Potato /LovelyPotato
 echo "Done!"
 mkdir MimiKatz
 cd MimiKatz
@@ -72,6 +72,7 @@ mv ./Out-Minidump.ps1 ./minidump.ps1
 mv ./Invoke-Mimikatz.ps1 ./mimikatz.ps1
 cd ..
 echo "All Done!! - Downloads completed..."
+echo "apt-get install rlwrap"
 clear
 
 # -------------------------------------------------------------------------------------
