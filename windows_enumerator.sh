@@ -48,9 +48,8 @@ cd Lovely-Potato
 mv ./Invoke-LovelyPotato.ps1 ./lovelypotato.ps1
 mv ./JuicyPotato-Static.exe ./juicypotato.exe
 rm README.md
-rm test_clsid.bat
 cd ..
-mv /Lovely-Potato /LovelyPotato
+mv ./Lovely-Potato ./LovelyPotato
 echo "Done!"
 mkdir MimiKatz
 cd MimiKatz
