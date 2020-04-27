@@ -65,7 +65,7 @@ mv ./WinPwn.ps1 ./winpwn.ps1
 mv ./Out-Minidump.ps1 ./minidump.ps1
 mv ./Invoke-Mimikatz.ps1 ./mimikatz.ps1
 cd ..
-echo "apt-get install rlwrap"
+apt-get install rlwrap
 echo "-----------------------------------"
 echo "All Done!! - Downloads completed..."
 echo "-----------------------------------"
