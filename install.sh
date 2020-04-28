@@ -59,7 +59,7 @@ wget https://github.com/HarmJ0y/PowerUp/raw/master/PowerUp.ps1
 wget https://github.com/S3cur3Th1sSh1t/WinPwn/raw/master/WinPwn.ps1
 wget https://github.com/PowerShellMafia/PowerSploit/raw/master/Exfiltration/Out-Minidump.ps1
 wget https://github.com/PowerShellMafia/PowerSploit/raw/master/Exfiltration/Invoke-Mimikatz.ps1
-wget https://github.com/PowerShellEmpire/PowerTools/raw/master/PowerView/powerview.ps1
+wgwt https://github.com/PowerShellMafia/PowerSploit/raw/3f7a32d6237caa037b870aaa941a35e3761bf13c/Recon/PowerView.ps1
 mv ./jaws-enum.ps1 ./jawsenu.ps1
 mv ./PowerUp.ps1 ./powerup.ps1
 mv ./WinPwn.ps1 ./winpwn.ps1
