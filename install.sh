@@ -45,7 +45,7 @@ mv ./Invoke-LovelyPotato.ps1 ./lovelypotato.ps1
 mv ./JuicyPotato-Static.exe ./juicypotato.exe
 rm README.md
 cd ..
-mv /Lovely-Potato /LovelyPotato
+mv Lovely-Potato LovelyPotato
 mkdir MimiKatz
 cd MimiKatz
 cp /usr/share/windows-resources/mimikatz/Win32/mimikatz.exe ./mimikatz32.exe
