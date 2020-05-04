@@ -59,14 +59,18 @@ wget https://github.com/HarmJ0y/PowerUp/raw/master/PowerUp.ps1
 wget https://github.com/S3cur3Th1sSh1t/WinPwn/raw/master/WinPwn.ps1
 wget https://github.com/PowerShellMafia/PowerSploit/raw/master/Exfiltration/Out-Minidump.ps1
 wget https://github.com/PowerShellMafia/PowerSploit/raw/master/Exfiltration/Invoke-Mimikatz.ps1
-wget https://github.com/PowerShellMafia/PowerSploit/tree/dev/Recon
+wget https://github.com/PowerShellMafia/PowerSploit/raw/master/Recon/PowerView.ps1
+wget https://github.com/Kevin-Robertson/Powermad/raw/master/Powermad.ps1
 mv ./jaws-enum.ps1 ./jawsenu.ps1
 mv ./PowerUp.ps1 ./powerup.ps1
 mv ./WinPwn.ps1 ./winpwn.ps1
 mv ./Out-Minidump.ps1 ./minidump.ps1
 mv ./Invoke-Mimikatz.ps1 ./mimikatz.ps1
+mv ./PowerMad.ps1 ./powermad.ps1
+mv ./PowerView.ps1 ./powerview.ps1
 cd ..
 apt-get install rlwrap
+chmod +x ./ -R
 echo "-----------------------------------"
 echo "All Done!! - Downloads completed..."
 echo "-----------------------------------"
