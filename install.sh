@@ -66,7 +66,7 @@ mv ./PowerUp.ps1 ./powerup.ps1
 mv ./WinPwn.ps1 ./winpwn.ps1
 mv ./Out-Minidump.ps1 ./minidump.ps1
 mv ./Invoke-Mimikatz.ps1 ./mimikatz.ps1
-mv ./PowerMad.ps1 ./powermad.ps1
+mv ./Powermad.ps1 ./powermad.ps1
 mv ./PowerView.ps1 ./powerview.ps1
 cd ..
 apt-get install rlwrap
