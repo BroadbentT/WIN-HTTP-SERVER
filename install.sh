@@ -70,6 +70,8 @@ mv ./Powermad.ps1 ./powermad.ps1
 mv ./PowerView.ps1 ./powerview.ps1
 cd ..
 apt-get install rlwrap
+wget https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/raw/master/Rubeus.exe
+mv Rubeus.exe ./MimiKatz/rubeus.exe
 chmod +x ./ -R
 echo "-----------------------------------"
 echo "All Done!! - Downloads completed..."
