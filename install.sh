@@ -70,10 +70,11 @@ mv ./Powermad.ps1 ./powermad.ps1
 mv ./PowerView.ps1 ./powerview.ps1
 cd ..
 apt-get install rlwrap
+mkdir Executables
 wget https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/raw/master/Rubeus.exe
-mv Rubeus.exe ./MimiKatz/rubeus.exe
-wget https://nmap.org/dist/nmap-7.80-setup.exehttps://nmap.org/dist/nmap-7.80-setup.exe
-mv nmap-7.80-setup.exe ./MimiKatz/nmap-setup.exe
+mv Rubeus.exe ./Executables/rubeus.exe
+wget https://nmap.org/dist/nmap-7.80-setup.exe
+mv nmap-7.80-setup.exe ./Executables/nmap-setup.exe
 chmod +x ./ -R
 echo "-----------------------------------"
 echo "All Done!! - Downloads completed..."
