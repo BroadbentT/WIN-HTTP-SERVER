@@ -76,6 +76,10 @@ mv Rubeus.exe ./Executables/rubeus.exe
 wget https://nmap.org/dist/nmap-7.80-setup.exe
 mv nmap-7.80-setup.exe ./Executables/nmap-setup.exe
 chmod +x ./ -R
+cd Executables
+cp /usr/share/windows-resources/binaries/nc.exe nc.exe
+cp /usr/share/windows-resources/binaries/plink.exe plink.exe
+cd ..
 echo "-----------------------------------"
 echo "All Done!! - Downloads completed..."
 echo "-----------------------------------"
