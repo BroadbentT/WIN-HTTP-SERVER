@@ -78,7 +78,9 @@ mv nmap-7.80-setup.exe ./Executables/nmap-setup.exe
 chmod +x ./ -R
 cd Executables
 cp /usr/share/windows-resources/binaries/nc.exe nc.exe
+chmod +x nc.exe
 cp /usr/share/windows-resources/binaries/plink.exe plink.exe
+chmod +x plink.exe
 cd ..
 echo "-----------------------------------"
 echo "All Done!! - Downloads completed..."
