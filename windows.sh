@@ -49,7 +49,9 @@ echo "\n"
 # Modified: N/A                                                               
 # -------------------------------------------------------------------------------------
 
-echo "Instructions: START PowerShell -ExecutionPolicy Unrestricted -NoProfile\n"
+echo "Instructions:\n"
+echo "Get-ExecutionPolicy -List\n"
+echo "Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted\n"
 filename="file.txt"
 while read line
   do 
