@@ -1,7 +1,7 @@
 # WIN-HTTP-SERVER
 ![Screenshot](picture0.png)
 
-An expanded simple HTTP server for windows exploitation.
+A custom shell-script file that downloads varies exploitation files and manages a simple Windows HTTP Server.
 
 TESTED: Kali Linux 2019 <br>
 USAGE : sh windows.sh
