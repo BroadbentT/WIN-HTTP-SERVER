@@ -6,11 +6,11 @@ An expanded simple HTTP server for windows exploitation.
 TESTED: Kali Linux 2019 <br>
 USAGE : sh windows.sh
 
-| LANGUAGE  | FILENAME    | INFORMATION                          | MD5 Hash                         | Version |
-|------     |------       | -------                              | ----                             | ----    |
-| bash      | install.sh  | Installs all the necessary files.    | 701a13c0be02eb3f0a555fbd02006099 | 123 |
-| sh        | windows.sh  | Manages the HTTP server profiles.    | 0159aaae69cc3fe6b57e7a4a3dd2ea3d | 123 |
-| bash      | tidyup.sh   | Tidys up redundent files, after use. | 812dcc1c1b85f33bf4e2cb248e4dcda5 | 123 | 
+| LANGUAGE  | FILENAME    | INFORMATION                   | MD5 Hash                         | Version |
+|------     |------       | -------                       | ----                             | ----    |
+| bash      | install.sh  | Installs all necessary files. | 701a13c0be02eb3f0a555fbd02006099 | abc-123 |
+| sh        | windows.sh  | Manages HTTP server profiles. | 0159aaae69cc3fe6b57e7a4a3dd2ea3d | abc-123 |
+| bash      | tidyup.sh   | Tidy's up redundent files.    | 812dcc1c1b85f33bf4e2cb248e4dcda5 | abc-123 | 
 
 
 ## COMPUTER MISUSE ACT 1990 - SECTION 3A
