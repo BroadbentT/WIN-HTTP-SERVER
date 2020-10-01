@@ -8,9 +8,9 @@ USAGE : sh windows.sh
 
 | LANGUAGE  | FILENAME    | INFORMATION                          | MD5 Hash                         | Version |
 |------     |------       | -------                              | ----                             | ----    |
-| bash      | install.sh  | Installs all the necessary files.    |                                  | Covid-3 |
-| sh        | windows.sh  | Manages the HTTP server profiles.    |                                  | Covid-3 |
-| bash      | tidyup.sh   | Tidys up redundent files, after use. |                                  | Covid-3 | 
+| bash      | install.sh  | Installs all the necessary files.    | 701a13c0be02eb3f0a555fbd02006099 | Covid-3 |
+| sh        | windows.sh  | Manages the HTTP server profiles.    | 0159aaae69cc3fe6b57e7a4a3dd2ea3d | Covid-3 |
+| bash      | tidyup.sh   | Tidys up redundent files, after use. | 812dcc1c1b85f33bf4e2cb248e4dcda5 | Covid-3 | 
 
 
 ## COMPUTER MISUSE ACT 1990 - SECTION 3A
