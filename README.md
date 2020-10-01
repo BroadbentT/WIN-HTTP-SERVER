@@ -4,7 +4,7 @@
 An expanded simple HTTP server for windows exploitation.
 
 TESTED: Kali Linux 2019 <br>
-USAGE : sh windows.sh
+USAGE : bash windows.sh
 
 | LANGUAGE  | FILENAME    | INFORMATION                          | MD5 Hash                         | Version |
 |------     |------       | -------                              | ----                             | ----    |
