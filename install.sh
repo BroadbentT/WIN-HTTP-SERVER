@@ -24,6 +24,7 @@ mkdir ProcDump
 mv ./procdump.exe ./ProcDump/procdump32.exe
 mv ./procdump64.exe ./ProcDump/procdump64.exe
 rm Eula.txt
+rm procdump64a.exe
 mkdir WinPeas
 cd WinPeas
 # wget https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/raw/master/winPEAS/winPEASexe/winPEAS/bin/Obfuscated%20Releases/winPEASany.exe
@@ -81,6 +82,10 @@ cp /usr/share/windows-resources/binaries/nc.exe nc.exe
 chmod +x nc.exe
 cp /usr/share/windows-resources/binaries/plink.exe plink.exe
 chmod +x plink.exe
+wget https://dl.packetstormsecurity.net/Crackers/PWDumpX.zip
+unzip PWDumpX.zip
+rm PWDumpX.zip
+mv "./PWDumpX 1.0/PWDumpX.exe" PWDumpX.exe
 cd ..
 echo "-----------------------------------"
 echo "All Done!! - Downloads completed..."
