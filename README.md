@@ -2,6 +2,11 @@
 ![Screenshot](picture0.png)
 An expanded Windows HTTP Server
 
-1. sh install.sh
-2. sh windows.sh
-3. sh tidyup.sh
+TESTED: Kali Linux 2019 <br>
+USAGE : sh windows.sh
+
+| LANGUAGE  | FILENAME    | INFORMATION                          | MD5 Hash                         | Version |
+|------     |------       | -------                              | ----                             | ----    |
+| bash      | install.sh  | Installs all the necessary files.    |                                  | Covid-3 |
+| bash      | windows.sh  | Manages the HTTP server profiles.    |                                  | Covid-3 |
+| bash      | tidyup.sh   | Tidys up redundent files, after use. |                                  | Covid-3 | 
