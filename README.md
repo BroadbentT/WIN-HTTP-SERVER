@@ -1,7 +1,7 @@
 # WIN-HTTP-SERVER
 ![Screenshot](picture0.png)
 
-An expanded Windows HTTP Server
+An expanded simple HTTP server for windows exploitation.
 
 TESTED: Kali Linux 2019 <br>
 USAGE : sh windows.sh
@@ -11,3 +11,6 @@ USAGE : sh windows.sh
 | bash      | install.sh  | Installs all the necessary files.    |                                  | Covid-3 |
 | bash      | windows.sh  | Manages the HTTP server profiles.    |                                  | Covid-3 |
 | bash      | tidyup.sh   | Tidys up redundent files, after use. |                                  | Covid-3 | 
+
+## COMPUTER MISUSE ACT 1990 - SECTION 3A
+This software program has been specifically written for the purpose of legitimate penetration testing and should not be used for any other unauthorised or nefarious reasons.
