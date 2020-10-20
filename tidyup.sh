@@ -16,6 +16,5 @@
 
 rm file.txt
 rm output.txt
-rm ./PowerShell/reverseshell.ps1
 
 #EOF
