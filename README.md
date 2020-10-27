@@ -8,8 +8,8 @@ USAGE : sh windows.sh
 
 | SCRIPT | FILENAME    | INFORMATION                   | MD5 Hash                         | Version |
 |------  |------       | -------                       | ----                             | ----   |
-| sh     | install.sh  | Installs all necessary files. | 00e15bc605334ed84d3d2e7e46e5ea03 | abc123 |
-| sh     | windows.sh  | Manages HTTP server profiles. | d899ab09b0d9bd810a5e09057635f123 | abc123 |
+| sh     | install.sh  | Installs all necessary files. | ffc00bc91357b57972047c41fc108303 | abc123 |
+| sh     | windows.sh  | Manages HTTP server profiles. | a9a8f830ee24ed7b5c14d5824135b820 | abc123 |
 | sh     | tidyup.sh   | Tidy's up redundent files.    | 8fe713c747e285769e6eac475617655a | abc123 | 
 
 
