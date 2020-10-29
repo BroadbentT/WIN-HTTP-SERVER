@@ -2,7 +2,7 @@
 # coding:UTF-8
 
 # -------------------------------------------------------------------------------------
-#                                Windows HTTP Server
+#                                WINDOWS HTTP SERVER
 #                BY TERENCE BROADBENT BSC CYBER SECURITY (FIRST CLASS)
 # -------------------------------------------------------------------------------------
 
@@ -16,5 +16,7 @@
 
 rm file.txt
 rm output.txt
-
+rm ./APT/reverseshell.ps1
+rm ./APT/winpayload.exe
+echo "Done!!..."
 #EOF

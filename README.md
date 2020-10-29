@@ -8,9 +8,9 @@ USAGE : sh windows.sh
 
 | SCRIPT | FILENAME    | INFORMATION                   | MD5 Hash                         | Version |
 |------  |------       | -------                       | ----                             | ----   |
-| sh     | install.sh  | Installs all necessary files. | ffc00bc91357b57972047c41fc108303 | abc123 |
-| sh     | windows.sh  | Manages HTTP server profiles. | a9a8f830ee24ed7b5c14d5824135b820 | abc123 |
-| sh     | tidyup.sh   | Tidy's up redundent files.    | 8fe713c747e285769e6eac475617655a | abc123 | 
+| sh     | install.sh  | Installs all necessary files. | 614d90b7c7bd8881fbabca89f4404183 | abc123 |
+| sh     | windows.sh  | Manages HTTP server profiles. | 233e5857f2f387847144453b551cb604 | abc123 |
+| sh     | tidyup.sh   | Tidy's up redundent files.    | 9d7e8d71b9696c8679b2bfeed635e4e5 | abc123 | 
 
 
 ## COMPUTER MISUSE ACT 1990 - SECTION 3A

