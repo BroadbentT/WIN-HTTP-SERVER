@@ -66,10 +66,10 @@ echo "--------------------------------------------------------------------------
 echo "jawsenum.ps1			winpayload.exe			powerup.ps1			nc64.exe			mimidump.ps1            "
 echo "sharphound.ps1			webshell.php			powercat.ps			plink64.exe			mimikatz.ps1		"
 echo "sharphound.exe			myshell.php			powerview.ps1			chisel64.exe			winpwn.ps1		"
-echo "winpeas32.exe			image.php.jpg			powermad.ps1							lovelypotato.ps1	"
-echo "winpeas64.exe							procdump32.exe							mimikatz64.exe		"
-echo "rubeus.exe							procdump64.exe							mimikatz32.exe		"
-echo "nmapsetup.exe																		"
+echo "winpeas32.exe			image.php.jpg			powermad.ps1			test_clsid.bat			lovelypotato.ps1	"
+echo "winpeas64.exe							procdump32.exe			RogueOxidResolver.exe		RoguePotato.exe		"
+echo "rubeus.exe							procdump64.exe							mimikatz64.exe		"
+echo "nmapsetup.exe															mimikatz32.exe          "			"
 echo "----------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 exec python3 -m http.server 80 > output.txt &
