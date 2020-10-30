@@ -47,6 +47,9 @@ mv ./Lovely-Potato/test_clsid.bat ./ &> /dev/null
 rm ./Lovely-Potato/README.md &> /dev/null
 rm -rf Lovely-Potato &> /dev/null
 rm Eula.txt &> /dev/null
+wget "https://github.com/antonioCoco/RoguePotato/releases/download/1.0/RoguePotato.zip" -O RoguePotato.zip
+unzip RoguePotato.zip
+rm RoguePotato.zip
 echo "[+] Downloading PowerShell Scripts..."
 wget "https://github.com/411Hall/JAWS/raw/master/jaws-enum.ps1" -O jawsenum.ps1 &> /dev/null
 wget "https://github.com/besimorhino/powercat/raw/master/powercat.ps1"-O powercat.ps1 &> /dev/null
