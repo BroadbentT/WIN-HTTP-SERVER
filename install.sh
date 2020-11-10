@@ -84,6 +84,8 @@ while read line
   do 
   sed -i s/127.0.0.1/$line/g myshell.php
 done < $filename
+mv ./RogueOxidResolver.exe ./rogueoxidresolver.exe
+mv ./RoguePotato.exe ./roguepotato.exe
 echo "-----------------------------------"
 echo "All Done!! - Downloads completed..."
 echo "-----------------------------------"
