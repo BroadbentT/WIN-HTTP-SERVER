@@ -98,11 +98,11 @@ echo "rubeus.exe							procdump64.exe							mimikatz64.exe		"
 echo "nmapsetup.exe															mimikatz32.exe          "
 echo "----------------------------------------------------------------------------------------------------------------------------------------------------------"
 
-echo "[+] Starting Meterpreter..."
 xdotool key Ctrl+Shift+T; xdotool key Alt+Shift+S; xdotool type "Meterpreter"; xdotool key Return
+echo "[+] Starting Meterpreter..."
 xdotool type "msfconsole -r meterpreter.rc"; xdotool key Return
-xdotool key Ctrl+Tab
 echo "[+] Starting HTTP server..."
+xdotool key Ctrl+Tab
 python3 -m http.server 80 > output.txt
 rlwrap nc -nvlp 9001
 
