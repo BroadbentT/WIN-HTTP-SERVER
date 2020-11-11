@@ -16,7 +16,8 @@
 
 rm file.txt
 rm output.txt
+rm meterpreter.rc
 rm ./APT/reverseshell.ps1
-rm ./APT/winpayload.exe
+rm ./APT/meterpreter.exe
 echo "Done!!..."
 #EOF

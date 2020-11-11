@@ -18,6 +18,7 @@ echo "----------------------------------"
 echo "[+] Downloading key files...      "
 apt-get install exiftool -y
 apt-get install rlwrap -y
+apt-get install xdotool -y
 clear
 echo "----------------------------------"
 echo "[+] Downloading key files...      "
@@ -84,6 +85,7 @@ while read line
   do 
   sed -i s/127.0.0.1/$line/g myshell.php
 done < $filename
+rm file.txt
 mv ./RogueOxidResolver.exe ./rogueoxidresolver.exe
 mv ./RoguePotato.exe ./roguepotato.exe
 echo "-----------------------------------"
